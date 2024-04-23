@@ -37,9 +37,10 @@
          let nip = $("#nip").val()
          let pass = $("#password").val()
          alert("jalan")
-         $.get(url, function(data) {
-            console.log(data)
-         })
+         $.post(url, {email:nip, password:pass})
+            .done(function(data){
+               alert(data)
+            })
       })
    </script>
 </body>
